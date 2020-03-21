@@ -59,7 +59,7 @@ int main(int argc, char *argv[]) {
     array_copy(copy, array, length);
     
     quick_sort(array, length);
-
+    
     /* show the ordered array in the screen */
     array_dump(array, length);
     

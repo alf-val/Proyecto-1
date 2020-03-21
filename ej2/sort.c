@@ -9,12 +9,13 @@
 
 
 static void quick_sort_rec(int a[], unsigned int izq, unsigned int der) {
- /* needs implementation */
+    unsigned int piv;
+    if (der > izq){
+        piv = partition(a, izq, der);
+        quick_sort_rec(a, izq, (piv == 0) ? 0 : piv-1);
+        quick_sort_rec(a, piv+1, der);
+    }
 
-    /* no implementes partition, ya está implementado en sort_helpers.o
-       (no se puede leer, pero en sort_helpers.h vas a encontrar información
-        para saber cómo usarlo)
-    */
 }
 
 void quick_sort(int a[], unsigned int length) {

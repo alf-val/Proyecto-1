@@ -9,12 +9,15 @@
 
 
 static void insert(int a[], unsigned int i) {
-    /* needs implementation */
+    while(i > 0 && goes_before(a[i], a[i-1])){
+        swap(a, i, i-1);
+        i--;
+    }
 }
 
 void insertion_sort(int a[], unsigned int length) {
     for (unsigned int i = 1u; i < length; ++i) {
-        /* needs implementation */
+        assert(array_is_sorted(a, i - 1));
         insert(a, i);
     }
 }
