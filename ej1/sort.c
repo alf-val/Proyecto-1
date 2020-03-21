@@ -8,6 +8,11 @@
 #include "sort.h"
 
 
+/**
+ * La funcion goes_before compara el valor absoluto de dos numeros a y b,
+ * si abs(a) < abs(b), de ser iguales los valores absolutos devuelve
+ * verdadero si a <= b
+ */ 
 static void insert(int a[], unsigned int i) {
     while(i > 0 && goes_before(a[i], a[i-1])){
         swap(a, i, i-1);
